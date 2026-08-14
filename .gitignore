@@ -20,5 +20,8 @@ Thumbs.db
 # Model Files
 *.pkl
 
+# Raw Data Sets
+ml/data/raw/*.csv
+
 # Environment Variables
 .env
