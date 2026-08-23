@@ -52,7 +52,6 @@ Feature decisions:
 Status: COMPLETE
 
 ## Milestone 4 — Data Cleaning
-Status: COMPLETE
 
 Tasks:
 - Investigate extreme `km_driven` values
@@ -61,11 +60,15 @@ Tasks:
 - Preserve raw dataset
 - Create processed dataset
 
+Status: COMPLETE
+
 ## Milestone 5 — Feature Engineering
 - Encode categorical variables
 - Prepare numerical features
 - Investigate useful transformations
 - Build reproducible preprocessing pipeline
+
+Status: COMPLETE
 
 ## Milestone 6 — Model Training
 - Train baseline model
