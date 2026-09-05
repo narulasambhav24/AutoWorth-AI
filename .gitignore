@@ -25,3 +25,4 @@ ml/data/raw/*.csv
 
 # Environment Variables
 .env
+ml/models/*.joblib
