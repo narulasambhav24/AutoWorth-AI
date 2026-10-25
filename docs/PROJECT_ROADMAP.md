@@ -75,6 +75,13 @@ Status: COMPLETE
 - Evaluate using MAE, RMSE, R²
 - Compare multiple regression algorithms
 
+Status: COMPLETE
+
+Completed with canonical preprocessing in `ml/notebooks/06_canonical_baseline_evaluation.ipynb`:
+- Compared Dummy, Linear, Ridge, and Random Forest regressors under both random and grouped splits
+- Fitted a fresh preprocessing pipeline within every training partition
+- Saved the full-data Random Forest baseline artifact with embedded brand normalization
+
 ## Milestone 7 — Model Improvement
 - Feature engineering experiments
 - Hyperparameter tuning

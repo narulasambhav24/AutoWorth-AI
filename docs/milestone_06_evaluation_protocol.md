@@ -18,3 +18,9 @@ Report MAE, RMSE, and R² for both protocols. Do not reuse a fitted preprocessor
 ## Chosen primary evaluation
 
 Use the grouped split as the primary Milestone 6 model-selection result, because it measures generalization to feature profiles not already present in the training partition. Keep the ordinary random-split result as a secondary comparator: the gap quantifies the potential optimism caused by profile overlap and preserves continuity with the initial holdout design. This decision changes the evaluation design only; it does not alter the Milestone 5 preprocessing pipeline.
+
+## Canonical implementation
+
+Milestone 6 is implemented in `ml/notebooks/06_canonical_baseline_evaluation.ipynb`. It uses `ml.preprocessing.build_preprocessor` for every evaluation and for the final saved Random Forest baseline. That reusable pipeline embeds the deterministic `ISUZU -> Isuzu` transformation before its learned column transformer, so the same rule runs at fit time and prediction time.
+
+The notebook fits a new preprocessing instance for every model and split, compares Dummy, Linear, Ridge, and Random Forest regressors using MAE, RMSE, and R², then fits the selected Random Forest on all cleaned rows. The resulting `ml/models/autoworth_random_forest_baseline.joblib` and `ml/models/preprocessor.joblib` contain `brand_Isuzu` but not `brand_ISUZU`.

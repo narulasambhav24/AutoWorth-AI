@@ -16,6 +16,8 @@ Numerical features are `vehicle_age`, `km_driven`, `mileage`, `engine`, `max_pow
 
 The resulting feature matrix is expected to be sparse because each categorical feature contributes one active encoded value per record. With the fixed training split, it has 30 brand categories, 118 model categories, and 158 one-hot features in total; together with six numerical features, the transformed matrix has 164 columns. The notebook inspects train/test dimensions, feature names, sparsity, and density. It also verifies that an unseen brand can be transformed without changing the learned feature layout.
 
+The reusable `ml.preprocessing.build_preprocessor` factory embeds the same deterministic brand normalization before its learned column transformer. The Milestone 5 notebook saves its training-partition artifact as `ml/models/preprocessor_random_split.joblib`; the full-data `ml/models/preprocessor.joblib` is produced by the canonical Milestone 6 run and should be used for prediction integration.
+
 ## Scope boundary
 
 No model is trained, evaluated, selected, or saved in this milestone. The target is not transformed. Those decisions belong to later modelling milestones.
